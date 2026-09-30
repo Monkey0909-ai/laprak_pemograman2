@@ -24,7 +24,7 @@ public class PRAK102_2510817320002_SitiNurchalisah {
         int i = 0;
         StringBuilder hasil = new StringBuilder();
 
-        while (i <= 10) {
+        while (i < 10) {
             if (n % 5 == 0) {
                 int hasilBagi = (n / 5) - 1;
                 hasil.append(hasilBagi);
@@ -32,7 +32,7 @@ public class PRAK102_2510817320002_SitiNurchalisah {
                 hasil.append(n);
             }
 
-            if (i < 10) {
+            if (i < 9) {
                 hasil.append(", ");
             }
 
