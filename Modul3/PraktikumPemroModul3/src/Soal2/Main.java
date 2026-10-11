@@ -38,8 +38,8 @@ public class Main {
             list.add(new Negara(nama, jenis, pemimpin, tgl, bln, thn));
         }
 
-        for (int i = 0; i < list.size(); i++) {
-            Negara ng = list.get(i);
+        boolean pertama = true;
+        for (Negara ng : list) {
             String gelar;
 
             if (ng.getJenis().equalsIgnoreCase("monarki")) {
@@ -50,9 +50,10 @@ public class Main {
                 gelar = "Perdana Menteri";
             }
 
-            if (i > 0) {
+            if (!pertama) {
                 System.out.println();
             }
+            pertama = false;
 
             System.out.println("Negara " + ng.getNama() + " mempunyai " + gelar + " bernama " + ng.getPemimpin());
 
