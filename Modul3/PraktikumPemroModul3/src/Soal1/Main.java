@@ -1,5 +1,4 @@
 package Soal1;
-
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -16,10 +15,12 @@ public class Main {
         }
 
         int total = 0;
-        for (int i = 0; i < list.size(); i++) {
-            int nilai = list.get(i).getNilai();
-            System.out.println("Dadu ke-" + (i + 1) + " bernilai " + nilai);
+        int urutan = 1;
+        for (Dadu d : list) {
+            int nilai = d.getNilai();
+            System.out.println("Dadu ke-" + urutan + " bernilai " + nilai);
             total = total + nilai;
+            urutan++;
         }
 
         System.out.println("Total nilai dadu keseluruhan " + total);
